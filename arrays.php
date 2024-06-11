@@ -155,4 +155,53 @@ var_dump($cars);
 echo "<br>";
 echo "<br>";
 
+// sort() - sort arrays in ascending order
+// rsort() - sort arrays in descending order
+// asort() - sort associative arrays in ascending order, according to the value
+// ksort() - sort associative arrays in ascending order, according to the key
+// arsort() - sort associative arrays in descending order, according to the value
+// krsort() - sort associative arrays in descending order, according to the key
+
+$cars = array("Volvo", "BMW", "Toyota");
+sort($cars);
+var_dump($cars);
+echo "<br>";
+echo "<br>";
+
+$numbers = array(4, 6, 2, 22, 11);
+sort($numbers);
+var_dump($numbers);
+echo "<br>";
+echo "<br>";
+
+$numbers = array(4, 6, 2, 22, 11);
+rsort($numbers);
+var_dump($numbers);
+echo "<br>";
+echo "<br>";
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+asort($age);
+var_dump($age);
+echo "<br>";
+echo "<br>";
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+ksort($age);
+var_dump($age);
+echo "<br>";
+echo "<br>";
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+arsort($age);
+var_dump($age);
+echo "<br>";
+echo "<br>";
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+krsort($age);
+var_dump($age);
+echo "<br>";
+echo "<br>";
+
 ?>
