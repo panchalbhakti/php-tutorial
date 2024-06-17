@@ -51,7 +51,6 @@ foreach($obj as $key => $value) {
   echo $key . " => " . $value . "<br>";
 }
 
-
 ?>
 </body>
 </html>
