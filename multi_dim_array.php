@@ -33,4 +33,23 @@ echo $multiDim[3][0];
 echo $multiDim[3][1];
 echo $multiDim[3][2];
 echo $multiDim[3][3];
+
+echo "<br>";
+echo "<br>";
+
+for($i = 0; $i < count($multiDim); $i++){
+    echo var_dump($multiDim[$i]);
+    echo "<br>";
+}
+
+echo "<br>";
+echo "<br>";
+
+for($i = 0; $i < count($multiDim); $i++){
+    for($j = 0; $j < count($multiDim[$i]); $j++){
+        echo $multiDim[$i][$j];
+        echo " ";
+    }
+    echo "<br>";
+}
 ?>
