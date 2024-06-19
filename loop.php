@@ -14,6 +14,20 @@ echo"<br>";
 
 <?php
 
+//while loop
+$i = 2;
+while ($i < 8) {
+  if ($i == 5) break;
+  echo $i;
+  $i++;
+}
+echo"<br>";
+echo"<br>";
+
+?>
+
+<?php
+
 //Do-while loop
 $i = 1;
 do {
