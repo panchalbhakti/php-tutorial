@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/php-tutorial/get_post.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -43,21 +43,31 @@
     </div>
   </div>
 </nav>
+
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+  $email = $_POST['email'];
+  $password = $_POST['pass'];
+  echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Details submitted successfully</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+}
+
+?>
+
 <div class="container mt-3">
-<form>
+<form action="/php-tutorial/get_post.php" method="post">
     <h4>Please enter your email & password</h4>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label for="pass" class="form-label">Password</label>
+    <input type="password" class="form-control" id="pass" name="pass">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
